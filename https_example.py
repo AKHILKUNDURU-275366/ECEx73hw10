@@ -1,6 +1,7 @@
-# AKHIL KUNDURU-275366
+# AKHIL  KUNDURU-275366
 
 import socket, ssl
+
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
 context.verify_mode = ssl.CERT_REQUIRED
