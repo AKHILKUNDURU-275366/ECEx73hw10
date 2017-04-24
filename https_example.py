@@ -9,10 +9,10 @@ context.check_hostname = True
 context.load_default_certs()
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-ssl_sock = context.wrap_socket(s, server_hostname='help.github.com')
+ssl_sock = context.wrap_socket(s, server_hostname='https://www.facebook.com/')
 
 try:
-    ssl_sock.connect(('help.github.com', 443))
+    ssl_sock.connect(('https://www.facebook.com/', 443))
     ssl_sock.settimeout(1.0)
     ssl_sock.sendall("GET /articles/which-remote-url-should-i-use/ HTTP/1.1\r\nHostname: help.github.com\r\n\r\n")
     while 1:
