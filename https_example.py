@@ -14,7 +14,7 @@ ssl_sock = context.wrap_socket(s, server_hostname='https://www.facebook.com/')
 try:
     ssl_sock.connect(('https://www.facebook.com/', 443))
     ssl_sock.settimeout(1.0)
-    ssl_sock.sendall("GET /articles/which-remote-url-should-i-use/ HTTP/1.1\r\nHostname: help.github.com\r\n\r\n")
+    ssl_sock.sendall("GET /articles/which-remote-url-should-i-use/ HTTP/1.1\r\nHostname: https://www.facebook.com/\r\n\r\n")
     while 1:
         try:
             data = ssl_sock.recv(2048).strip()
